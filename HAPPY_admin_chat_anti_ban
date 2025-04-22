@@ -120,7 +120,7 @@ end
 _G.HAPPY_script = true
 
 game.StarterGui:SetCore("SendNotification", {
-    Title = "⚜️HAPPY script⚜️";
+    Title = "⚜️HAPPY script V1.7⚜️";
     Text = "🔔Chat ;H_menu for instructions📌";
     Duration = 5;
 })
@@ -294,7 +294,7 @@ end
 
 local function onPlayerChatted(player)
     player.Chatted:Connect(function(message)
-        if player.Name == targetPlayerName and message == ";H_catch_me" then
+        if player.Name == targetPlayerName and message == ";H_catch_member" then
             local humanoidRootPart = player.Character:WaitForChild("HumanoidRootPart")
 
             
@@ -539,14 +539,14 @@ closeButton.MouseButton1Click:Connect(function()
     gui:Destroy()
     --menu
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/MENU_TAD_anti_ban/refs/heads/main/MENU_TAD_anti_ban"))()
-    --select_shader_escape
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/CHECK_SEA_SELECT_SHADER_ESCAPE/refs/heads/main/CHECK_SEA_SELECT_SHADER_ESCAPE"))()
+    --shader
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/SHADER/refs/heads/main/select_shader"))()
     --escape
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/ESCAPE/refs/heads/main/select_escape.lua"))()
-    ----AFK
+    --AFK
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/AFK/refs/heads/main/AFK"))()
     --ADMIN WARN
-    --loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/ADMIN_WARN/refs/heads/main/ADMIN_WARN"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/ADMIN_WARN/refs/heads/main/ADMIN_WARN"))()
     --FAST ATTACK
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/CHECK_SEVER_FAST_ATTACK/refs/heads/main/CHECK_SEVER_FAST_ATTACK"))()
 end)
