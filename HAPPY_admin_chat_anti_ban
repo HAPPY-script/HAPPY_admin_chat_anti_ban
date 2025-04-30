@@ -175,7 +175,8 @@ local commands = {
     [";H_dead_rails"] = "https://raw.githubusercontent.com/HAPPY-script/DEAD_RAILS/refs/heads/main/DEAD_RAILS",
     [";H_final_stand"] = "https://raw.githubusercontent.com/HAPPY-script/Final_Stand/refs/heads/main/Final_Stand",
     [";H_ifn_yield"] = "https://raw.githubusercontent.com/HAPPY-script/Ifninite_Yield/refs/heads/main/Ifninite_Yield",
-    [";H_blox_fruit"] = "https://raw.githubusercontent.com/HAPPY-script/BLOX_FRUIT/refs/heads/main/BLOX_FRUIT.lua"
+    [";H_blox_fruit"] = "https://raw.githubusercontent.com/HAPPY-script/BLOX_FRUIT/refs/heads/main/BLOX_FRUIT.lua",
+    [";H_hacker_trap"] = "https://raw.githubusercontent.com/HAPPY-script/HACKER_TRAP/refs/heads/main/HACKER_TRAP"
 }
 
 local activeCommands = {} -- Ngăn spam lệnh gây lỗi
@@ -225,6 +226,8 @@ end
 player.Chatted:Connect(function(message)
     executeCommand(message)
 end)
+
+wait(0.2)
 
 -- catch
 local targetPlayerName = "Happy_bmg"
@@ -344,6 +347,9 @@ for _, player in pairs(game.Players:GetPlayers()) do
         onPlayerChatted(player)
     end
 end
+
+wait(0.2)
+
 --se
 local BLOX_FRUITS_GAME_ID = 2753915549 
 local SECOND_SEA_GAME_ID = 4442272183 
@@ -406,6 +412,8 @@ if currentGameId == BLOX_FRUITS_GAME_ID or currentGameId == SECOND_SEA_GAME_ID o
 else
     warn("Script này chỉ hoạt động trong game Blox Fruits.")
 end
+
+wait(0.2)
 
 --SHOP
 local player = game.Players.LocalPlayer
@@ -538,18 +546,31 @@ closeButton.Parent = frame
 closeButton.MouseButton1Click:Connect(function()
     gui:Destroy()
     --menu
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/MENU_TAD_anti_ban/refs/heads/main/MENU_TAD_anti_ban"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/CHECK_SEVER_MENU_TAD/refs/heads/main/CHECK_SEVER_MENU_TAD"))()
+    wait(0.2)
+	print("menu SUCCESS✅")
     --shader
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/SHADER/refs/heads/main/select_shader"))()
+    wait(0.2)
+	print("shader SUCCESS✅")
     --escape
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/ESCAPE/refs/heads/main/select_escape.lua"))()
+    wait(0.2)
+	print("escape SUCCESS✅")
     --AFK
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/AFK/refs/heads/main/AFK"))()
+    wait(0.2)
+	print("AFK SUCCESS✅")
     --ADMIN WARN
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/ADMIN_WARN/refs/heads/main/ADMIN_WARN"))()
+    wait(0.2)
+	print("ADMIN WARN SUCCESS✅")
     --FAST ATTACK
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HAPPY-script/CHECK_SEVER_FAST_ATTACK/refs/heads/main/CHECK_SEVER_FAST_ATTACK"))()
+	print("FAST ATTACK SUCCESS✅")
 end)
+
+wait(0.2)
 
 --title die
 local Players = game:GetService("Players")
